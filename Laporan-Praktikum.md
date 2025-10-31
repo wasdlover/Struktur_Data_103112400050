@@ -6,6 +6,7 @@
 - **Kelas**: IF-12-05
 
 ## 2. Motivasi Belajar Struktur Data
+<<<<<<< HEAD
 Untuk menambah Ilmu di kehidupan saya, dan dapat berguna di masa depan.
 Dan juga saya cukup menyukai mempelajari hal baru.
 
@@ -22,11 +23,36 @@ untuk menciptakan berbagai aplikasi yang bisa beradaptasi dengan beragam platfor
 
 ## BAGAIMANA CARA KERJANYA?
 Dalam konsep pemrograman, ada yang disebut dengan source file atau source code. Ini adalah instruksi yang kita buat di text editor seperti notepad++ yang kemudian akan digunakan oleh komputer untuk membentuk program C++.
+=======
+Untuk mempelajari bahasa baru dalam pemrograman dan dikarenakan saya terjun kedalam dunia pemrograman ini yang salah satunya membuat saya termotivasi juga, dan tentu agar saya dapat memahami dan menguasai pemrograman 
+
+## 3. Dasar Teori
+Double Linked List adalah struktur data yang terdiri dari simpul-simpul yang dibuat menggunakan struktur referensi-diri. Setiap simpul berisi tiga bagian, yaitu data , penunjuk ke simpul berikutnya , dan penunjuk ke simpul sebelumnya . Selain itu, daftar tertaut ganda dapat dilintasi dalam arah maju dan mundur.
+
+Hanya referensi ke simpul pertama yang diperlukan untuk mengakses seluruh daftar tertaut . Ini dikenal sebagai head . Simpul terakhir dalam list tidak menunjuk ke apa pun, sehingga menyimpan NULL di bagian tersebut.
+
+Node (Simpul): Merupakan elemen dasar dari sebuah linked list. Setiap node tidak hanya menyimpan data (info), tetapi juga menyimpan alamat memori dari node lain.
+double linked list terdiri dari connected nodes . Setiap simpul berisi tiga hal:
+
+Data: Informasi yang terkandung dalam daftar tertaut.
+prev: Penunjuk ke simpul sebelumnya.
+next: Penunjuk ke simpul berikutnya.
+
+first (atau head): node pertama.
+last (atau tail): node terakhir. Memudahkan operasi penambahan atau penghapusan data di akhir list.
+
+Penyisipan dalam double linked list di C++ berarti kita membuat node baru dengan beberapa data dan menambahkannya ke linked list. Sekarang, ada tiga cara untuk menyisipkan node dalam double linked list di C++. Cara-cara tersebut adalah:
+
+1. Insertion of node at the front of the list
+2. Insertion of node after a given node of the list
+3. Insertion of node at the end of the list
+>>>>>>> 6a137b4 (Laporan Week 6)
 
 
 ## 4. Guided
 ### 4.1 Guided 1
 
+<<<<<<< HEAD
 ### Source Code:
 #include <iostream>
 
@@ -96,10 +122,32 @@ int main(){
 
 ### Penjelasan:
 program ini dipakai buat mengkonversi suhu dari Celcius ke Fahrenheit. User diminta masukan suhu dalam Celcius lewat variabel celcius. Setelah itu, program menghitung konversinya pakai rumus (9.0/5.0) * celcius + 32 dan hasilnya disimpan dalam variabel fahrenheit. Terus, hasil konversi akan ditampilkan oleh program agar user tahu suhu setara dalam Fahrenheit.
+=======
+## SOURCE CODE
+![dll_insert](code-snapshot.png)
+
+## OUTPUT
+![dll_insert](<Screenshot 2025-10-30 225233.png>)
+
+## PENJELASAN
+Program tersebut berfungsi menjelaskan struktur dasar Double Linked List dengan menambahkan variable baru di awal dan di akhir dan diantara / setelah variable variable tertentu.
+
+### 4.2 Guided 2
+
+## SOURCE CODE
+![dll_hapus](<code-snapshot 2.png>)
+
+## OUTPUT
+![dll_hapus](<Screenshot 2025-10-30 225254.png>)
+
+## PENJELASAN
+Program ini berfungsi untuk menghapus variable di awal, akhir dan diantara / setelah variable variable tertentu
+>>>>>>> 6a137b4 (Laporan Week 6)
 
 ## 5. Unguided
 ### 5.1 Unguided 1
 
+<<<<<<< HEAD
 ### Source Code 
 #include <iostream> //103112400050
 using namespace std;
@@ -201,3 +249,44 @@ Praktikum ini kita diajarkan dasar program dan algoritma algritma pada C++, sepe
 
 ## 7. Referensi
 https://algorit.ma/blog/apa-itu-c-2022/
+=======
+## SOURCE CODE
+![unguided1](<code-snapshot 3.png>)
+
+## OUTPUT
+![unguided1](<Screenshot 2025-10-30 222600.png>)
+
+## PENJELASAN
+Kode yang diberikan adalah implementasi Double Linked List (DLL) yang menambahkan dua fungsi penting yang baru. Selain fungsi penyisipan biasa seperti insertFirst, insertLast, insertAfter, kode ini menjalankan insertBefore(L, P, R), untuk menambahkan node P sebelum node target yaitu R. Fungsi ini juga dengan cerdas menangani situasi khusus jika R merupakan elemen pertama (L.first) dengan menggunakan insertFirst. Fungsi baru printReverse(L), berfungsi untuk menampilkan konten daftar dari akhir ke awal, dengan mencari pointer prev yang dimulai dari L.last.
+
+### 5.2 Unguided 2
+
+## SOURCE CODE
+![unguided2](<code-snapshot 4.png>)
+
+## OUTPUT
+![unguided2](<Screenshot 2025-10-30 225144.png>)
+
+## PENJELASAN
+Program yang telah dimodifikasi ini memiliki beberapa fungsi yang masing masing memiliki tugasnya tersendiri seperti, fungsi (findElm) dibuat sebagai helper untuk mencari alamat node berdasarkan nilainya, lalu fungsi deleteByValue menggunakan (findElm) untuk menemukan target, dan fungsi seperti (deleteFirst, deleteLast, atau deleteAfter) untuk menghapus node. Dan juga fungsi deleteAll memanggil deleteFirst dengan melakukan loop sampai list akhirnya kosong 
+
+### 5.3 Unguided 3
+
+## SOURCE CODE
+![unguided3](<code-snapshot 5.png>)
+
+## OUTPUT
+![unguided3](<Screenshot 2025-10-30 225031.png>)
+
+## PENJELASAN
+Program modifikasi ini memiliki beberapa fungsi seperti smartInsert adalah fungsi untuk memasukkan data dengan aturan unik, yaitu angka genap ditaruh di paling belakang (last) sementara angka ganjil disisipkan di tengah list setelah angka ganjil lain yang lebih kecil darinya. Lalu, conditionalDelete yang bertugas menyisir list dan menghapus semua elemen yang berisi nilai ganjil. Selain itu, deleteByValue yang berfungsi untuk mencari nilai spesifik di dalam list dan menghapusnya, tidak peduli posisinya. Dan setiap elemen (node) terhubung ke elemen berikutnya lewat pointer P->next dan ke elemen sebelumnya lewat P->prev. Fungsi main bertugas untuk menjabarkan semua fungsi secara berurutan, mulai dari mengisi list pakai smartInsert, membersihkannya dari angka ganjil pakai conditionalDelete, hingga mengetes deleteByValue.
+
+## 6. Kesimpulan
+Kesimpulan yang saya tangkap dari praktikum ini adalah bagaimana cara mengimplementasikan Double Linked List dan juga mempelajari lebih dalam lagi tentang Double Linked List ini, dan apa yang kita ditugaskan untuk memodifikasi 2 kode yang telah disediakan asisten praktikum dan juga bagaimana kita mengimplementasi kan fungsi (findElm) , dan juga dua fungsi lainnya seperti (deleteByValue), dan (deleteAll). Dan kita juga memahami apakah pointer next dan prev adalah kunci untuk membangun dan mengelola data.
+
+## 7. Referensi
+1. https://www.mahirkoding.com/struktur-data-double-linked-list-dengan-bahasa-c/
+2. https://www.tutorialspoint.com/cplusplus-program-to-implement-doubly-linked-list 
+3. https://www.scaler.com/topics/doubly-linked-list-cpp/
+4. Modul Struktur Data Telkom University
+>>>>>>> 6a137b4 (Laporan Week 6)
